@@ -1,0 +1,36 @@
+CHECAR SE EXISTE UM TEXTO NA TELA
+
+//PEGA O TEXTO
+const linkElement = screen.getByText(/learn react/i);
+
+//CRIA A EXPECTATIVA
+expect(linkElement).toBeInTheDocument();
+
+
+///ACHAR COMPONENTES
+test('Exibir o app com  uma citação e um botão', ()=>{
+  render(<App/>);
+
+  const buttonEl = screen.getByRole('button');
+  const imageEl = screen.getByRole('img');
+  const textEl = screen.getByText(/hello/i);
+
+  expect(buttonEl).toBeInTheDocument();
+  expect(imageEl).toBeInTheDocument();
+  expect(textEl).toBeInTheDocument();
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
